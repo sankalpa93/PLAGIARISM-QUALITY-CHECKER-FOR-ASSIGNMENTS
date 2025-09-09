@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #f3f4f6; }
+    .login-box { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 300px; }
+    .login-box h2 { margin-bottom: 20px; text-align: center; }
+    .login-box input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+    .login-box button { width: 100%; padding: 10px; background: #2563eb; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+    .login-box button:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      // 🔒 Simple check (you can set fixed credentials if you want)
+      if(user && pass){
+        window.location.href = "home.html"; // redirect to your old site
+      } else {
+        alert("Please enter username & password!");
+      }
+    }
+  </script>
+</body>
+</html>
